@@ -641,57 +641,63 @@ a:hover {
 
 /* ===== Organizers ===== */
 .organizer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 28px;
 }
 
 .organizer-card {
+  flex: 0 1 280px;
+  max-width: 300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  transition: background 0.15s;
+  text-align: center;
+  padding: 28px 22px 24px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .organizer-card:hover {
-  background: var(--paper-alt);
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .organizer-avatar {
-  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--navy-700), var(--blue-500));
+  background: linear-gradient(145deg, var(--navy-700), var(--blue-500));
   color: #fff;
   font-weight: 800;
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .organizer-card h3 {
-  font-size: 0.92rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy-900);
-  margin-bottom: 2px;
-  line-height: 1.3;
+  margin-bottom: 6px;
+  line-height: 1.35;
 }
 
 .organizer-affil {
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 500;
   color: var(--ink-600);
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 /* ===== Footer ===== */
@@ -757,8 +763,9 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .organizer-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .organizer-card {
+    flex: 0 1 calc(50% - 11px);
+    max-width: none;
   }
 
   .dates-grid {
@@ -809,9 +816,9 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .organizer-grid {
-    grid-template-columns: 1fr;
-    padding: 8px;
+  .organizer-card {
+    flex: 1 1 100%;
+    max-width: 340px;
   }
 
   .footer-inner {
