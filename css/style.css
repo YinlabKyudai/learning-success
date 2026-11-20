@@ -926,6 +926,37 @@ a:hover {
   color: var(--cyan-400);
 }
 
+.footer-ack {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 22px;
+  padding-bottom: 8px;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.footer-ack h3 {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.footer-ack p {
+  font-size: 0.9rem;
+  color: #c7d7ec;
+  line-height: 1.6;
+}
+
+.footer-grant {
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 18px;
